@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class StartOptions : MonoBehaviour
 {
-    private PlayMusic playMusic;
-    //Reference to PlayMusic script
+    private PlayMusic playMusic;                                        //Reference to PlayMusic script
     private Pause pause;
     private float fastFadeIn = .01f;                                    //fade time
     private ShowPanels showPanels;                                      //reverence to script
@@ -44,124 +43,55 @@ public class StartOptions : MonoBehaviour
 	}
 
 
-	public void StartButtonClicked()
+	public void BuyCards()
 	{
-        //selects single player scene
-        sceneToStart = 1;
-        Cursor.visible = false;
+
         //If changeMusicOnStart is true, fade out volume of music
         if (changeMusicOnStart) 
 		{
 			playMusic.FadeDown(fadeColorAnimationClip.length);
 		}
 
-        //If true start fade and switch scenes halfway
-        if (changeScenes) 
-		{
-			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-			Invoke ("LoadDelayed", fadeColorAnimationClip.length * .5f);
-
-			//Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
-			animColorFade.SetTrigger ("fade");
-		}
-        showPanels.HideEndGamePanel();
-        pause.UnPause();
-
-    }
-
-    public void StartButtonClickedTwoPlayers()
-    {
-        //selects Split Screen game scene
-        sceneToStart = 2;
-        Cursor.visible = false;
-        //If changeMusicOnStart is true, fade out volume of music
-        if (changeMusicOnStart)
-        {
-            playMusic.FadeDown(fadeColorAnimationClip.length);
-        }
-
-        //If true start fade and switch scenes halfway
-        if (changeScenes)
-        {
-            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-            Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
-
-            //Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
-            animColorFade.SetTrigger("fade");
-        }
-        showPanels.HideEndGamePanel();
-        pause.UnPause();
-
-    }
-    public void RetryButtonClicked()
-    {
-        Cursor.visible = false;
-        //If changeMusicOnStart is true, fade out volume of music
-        if (changeMusicOnStart)
-        {
-            playMusic.FadeDown(fadeColorAnimationClip.length);
-        }
-
-        //If true start fade and switch scenes halfway
-        if (changeScenes)
-        {
-            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-            Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
-
-            //Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
-            animColorFade.SetTrigger("fade");
-        }
-
-        //If changeScenes is false, call StartGameInScene
-        else
-        {
             //Call the StartGameInScene function to start game without loading a new scene.
-            StartGameInScene();
-        }
+        //StartGameInScene();
+        showPanels.ShowBuyCardsPanel();
+        showPanels.HideMenu();
+        
 
-        pause.UnPause();
     }
 
-    public void RestartButton()
+    public void MainMenu()
     {
-        Cursor.visible = false;
+
         //If changeMusicOnStart is true, fade out volume of music
         if (changeMusicOnStart)
         {
             playMusic.FadeDown(fadeColorAnimationClip.length);
         }
 
-        //If true start fade and switch scenes halfway
-        if (changeScenes)
-        {
-            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-            Invoke("LoadDelayed", fadeColorAnimationClip.length * .5f);
+        //Call the StartGameInScene function to start game without loading a new scene.
+        showPanels.HideBuyCardsPanel();
+        showPanels.HideCardCollectionPanel();
+        //StartGameInScene();
+        showPanels.ShowMenu();
+       
 
-            //Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
-            animColorFade.SetTrigger("fade");
-        }
-
-        //If changeScenes is false, call StartGameInScene
-        else
-        {
-            //Call the StartGameInScene function to start game without loading a new scene.
-            StartGameInScene();
-        }
-        showPanels.HideEndGamePanel();
-        pause.UnPause();
     }
-    public void EndGameScreen()
+
+    public void ShowCollection()
     {
 
-        Cursor.visible = true;
-        pause.DoPause();
+        //If changeMusicOnStart is true, fade out volume of music
+        if (changeMusicOnStart)
+        {
+            playMusic.FadeDown(fadeColorAnimationClip.length);
+        }
 
-        showPanels.ShowEndGamePanel();
-        Time.timeScale = 0;
-
+        showPanels.HideMenu();
+        showPanels.ShowCardCollectionPanel();
     }
 
-    //Once the level has loaded, check if we want Music
+     //Once the level has loaded, check if we want Music
     void OnLevelWasLoaded()
 	{
 		//if changeMusicOnStart is true, call the PlayLevelMusic function of playMusic
@@ -174,9 +104,6 @@ public class StartOptions : MonoBehaviour
 
 	public void LoadDelayed()
 	{
-        //enable pause menu for in game
-        inMainMenu = false;
-
         //Call HideMenu function in showPanels to hide the main menu
         showPanels.HideMenu ();
 

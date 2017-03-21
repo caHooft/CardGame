@@ -8,8 +8,8 @@ public class ShowPanels : MonoBehaviour
 	public GameObject optionsTint;							//Store a reference to the Game Object OptionsTint 
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
 	public GameObject pausePanel;							//Store a reference to the Game Object PausePanel 
-    public GameObject EndGamePanel;                           //Store a reference to the Game Object EndGamePanel 
-
+    public GameObject BuyCardsPanel;                        //Store a reference to the Game Object BuyCardsPanel 
+    public GameObject CardCollectionPanel;                 //Store a reference to the Game Object CardCollectionPanel 
 
     //Call this function to activate and display the Options panel during the main menu
     public void ShowOptionsPanel()
@@ -25,8 +25,31 @@ public class ShowPanels : MonoBehaviour
 		optionsTint.SetActive(false);
 	}
 
-	//Call this function to activate and display the main menu panel during the main menu
-	public void ShowMenu()
+    //Call this function to activate and display the main menu panel during the main menu
+    public void ShowBuyCardsPanel()
+    {
+        BuyCardsPanel.SetActive(true);
+    }
+
+    //Call this function to deactivate and hide the main menu panel during the main menu
+    public void HideBuyCardsPanel()
+    {
+        BuyCardsPanel.SetActive(false);
+    }
+
+    public void ShowCardCollectionPanel()
+    {
+        CardCollectionPanel.SetActive(true);
+    }
+
+    //Call this function to deactivate and hide the main menu panel during the main menu
+    public void HideCardCollectionPanel()
+    {
+        CardCollectionPanel.SetActive(false);
+    }
+
+    //Call this function to activate and display the main menu panel during the main menu
+    public void ShowMenu()
 	{
 		menuPanel.SetActive (true);
 	}
@@ -51,16 +74,5 @@ public class ShowPanels : MonoBehaviour
 		optionsTint.SetActive(false);
 
 	}
-    public void ShowEndGamePanel()
-    {
-        EndGamePanel.SetActive(true);
-        
-    }
 
-    //Call this function to deactivate and hide the EndGamePanel during game play
-    public void HideEndGamePanel()
-    {
-        EndGamePanel.SetActive(false);
-
-    }
 }
