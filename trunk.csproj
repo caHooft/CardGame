@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BuyCards.cs" />
     <Compile Include="Assets\Scripts\Json\Card.cs" />
     <Compile Include="Assets\Scripts\Json\JsonHelper.cs" />
     <Compile Include="Assets\Scripts\menu\DontDestroy.cs" />
