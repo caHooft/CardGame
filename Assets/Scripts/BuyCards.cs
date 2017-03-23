@@ -16,6 +16,7 @@ public class BuyCards : MonoBehaviour
     public Text MysticText;
     public Text HoundMasterText;
     public Text PackPanelText;
+    public Text MoneyText;
     public int LootTable;
     public int AngelCount;
     public int UnicornCount;
@@ -23,8 +24,74 @@ public class BuyCards : MonoBehaviour
     public int MasterOfMusicCount;
     public int MysticCount;
     public int HoundMasterCount;
+    public int Money = 1000;
     #endregion
-    
+    public void SellACard(int CardSold)
+    {
+        switch ((CardSort)CardSold)
+        {
+            case CardSort.Angel:
+                if (AngelCount>=1)
+                {
+                    AngelCount--;
+                    Money += 500;
+                }
+
+                break;
+
+            case CardSort.Unicorn:
+                if (UnicornCount >= 1)
+                {
+                    UnicornCount--;
+                    Money += 500;
+                }
+
+                break;
+
+            case CardSort.Joker:
+                if (JokerCount >= 1)
+                {
+                    JokerCount--;
+                    Money += 250;
+                }
+
+                break;
+            case CardSort.MasterOfMusic:
+                if (MasterOfMusicCount >= 1)
+                {
+                    MasterOfMusicCount--;
+                    Money += 250;
+                }
+
+                break;
+
+            case CardSort.Mystic:
+                if (MysticCount >= 1)
+                {
+                    MysticCount--;
+                    Money += 50;
+                }
+
+                break;
+
+            case CardSort.Houndmaster:
+                if (HoundMasterCount >= 1)
+                {
+                    HoundMasterCount--;
+                    Money += 50;
+                }
+
+                break;
+        }
+        AngelText.text = AngelCount.ToString();
+        UnicornText.text = UnicornCount.ToString();
+        JokerText.text = JokerCount.ToString();
+        MasterOfMusicText.text = MasterOfMusicCount.ToString();
+        HoundMasterText.text = HoundMasterCount.ToString();
+        MysticText.text = MysticCount.ToString();
+        MoneyText.text = "Money:" +Money.ToString();
+    }
+
     public void BuyTheCards(int PackType)
     {
         string DrawnCards = "";

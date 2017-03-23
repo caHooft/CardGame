@@ -7,8 +7,17 @@ public enum CardType
     Normal,
     Rare,
     Epic
-
 }
+public enum CardSort
+{
+    Angel,
+    Unicorn,
+    Joker,
+    MasterOfMusic,
+    Mystic,
+    Houndmaster
+}
+
 
 [CreateAssetMenu]
 [System.Serializable]

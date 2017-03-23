@@ -77,7 +77,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BuyCards.cs" />
     <Compile Include="Assets\Scripts\Json\Card.cs" />
-    <Compile Include="Assets\Scripts\Json\JsonHelper.cs" />
     <Compile Include="Assets\Scripts\menu\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\menu\EventSystemChecker.cs" />
     <Compile Include="Assets\Scripts\menu\Pause.cs" />
