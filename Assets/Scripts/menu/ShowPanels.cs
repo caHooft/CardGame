@@ -9,9 +9,9 @@ public class ShowPanels : MonoBehaviour
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
 	public GameObject pausePanel;							//Store a reference to the Game Object PausePanel 
     public GameObject BuyCardsPanel;                        //Store a reference to the Game Object BuyCardsPanel 
-    public GameObject CardCollectionPanel;                 //Store a reference to the Game Object CardCollectionPanel 
-
-    //Call this function to activate and display the Options panel during the main menu
+    public GameObject CardCollectionPanel;                  //Store a reference to the Game Object CardCollectionPanel 
+    public GameObject PackPanel;                            //Store a reference to the Game Object PackPanel 
+    
     public void ShowOptionsPanel()
 	{
 		optionsPanel.SetActive(true);
@@ -42,10 +42,21 @@ public class ShowPanels : MonoBehaviour
         CardCollectionPanel.SetActive(true);
     }
 
-    //Call this function to deactivate and hide the main menu panel during the main menu
+    
     public void HideCardCollectionPanel()
     {
         CardCollectionPanel.SetActive(false);
+    }
+
+    public void ShowPackPanel()
+    {
+        PackPanel.SetActive(true);
+    }
+
+    //Call this function to deactivate and hide the main menu panel during the main menu
+    public void HidePackPanel()
+    {
+        PackPanel.SetActive(false);
     }
 
     //Call this function to activate and display the main menu panel during the main menu
