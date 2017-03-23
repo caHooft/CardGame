@@ -1,0 +1,142 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 675MX (ID=0x11a7)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   10.18.10.4358
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.201 seconds
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\caspe\Dropbox\Examen 3 Game\CardGame\CardInterface_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on StartOptions
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 382)
+
+OnLevelWasLoaded was found on EventSystemChecker
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 382)
+
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.343592 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 6ac -> priority: 1 
+  Thread -> id: 330c -> priority: 1 
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unicorn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Angel
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unicorn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+mystic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HoundMaster
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Angel
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HoundMaster
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Angel
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unicorn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Angel
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MasterOfMusic
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Joker
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
