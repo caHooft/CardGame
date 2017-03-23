@@ -24,8 +24,13 @@ public class BuyCards : MonoBehaviour
     public int MasterOfMusicCount;
     public int MysticCount;
     public int HoundMasterCount;
-    public int Money = 1000;
+    public static int Money = 10000;
     #endregion
+
+    public void Awake()
+    {
+        MoneyText.text = "Money:" + Money.ToString();
+    }
     public void SellACard(int CardSold)
     {
         switch ((CardSort)CardSold)
@@ -96,6 +101,42 @@ public class BuyCards : MonoBehaviour
     {
         string DrawnCards = "";
 
+        switch ((CardType)PackType)
+        {
+            case CardType.Normal:
+                if(Money >= 500)
+                {
+                    Money -= 500;
+                }
+                else
+                {
+                    return;
+                }
+                break;
+
+            case CardType.Rare:
+                if (Money >= 2500)
+                {
+                    Money -= 2500;
+                }
+                else
+                {
+                    return;
+                }
+                break;
+
+            case CardType.Epic:
+                if (Money >= 4000)
+                {
+                    Money -= 4000;
+                }
+                else
+                {
+                    return;
+                }
+                break;
+        }
+
         for (int i = 0; i < NumberOfCardsEachPack; i++)
         {
            int rareValue = 0;
@@ -113,16 +154,16 @@ public class BuyCards : MonoBehaviour
 
                    rareValue = 60;
                    epicValue = 20;
-                   break;
+                    break;
 
                case CardType.Epic:
                    rareValue = 80;
                    epicValue = 30;
                    break;
            }
-
-           Luck = Random.Range(0, 100);
-           LootTable = Random.Range(0, 100);
+            MoneyText.text = "Money:" + Money.ToString();
+            Luck = Random.Range(0, 100);
+            LootTable = Random.Range(0, 100);
 
            if (Luck <= epicValue)
            {

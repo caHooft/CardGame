@@ -48,11 +48,34 @@ public class ShowPanels : MonoBehaviour
         CardCollectionPanel.SetActive(false);
     }
 
-    public void ShowPackPanel()
+    public void ShowPackPanel(int PackType)
     {
-        PackPanel.SetActive(true);
-    }
 
+        switch ((CardType)PackType)
+        {
+            case CardType.Normal:
+                if(BuyCards.Money >=500)
+                {
+                    PackPanel.SetActive(true);
+                }
+                break;
+
+            case CardType.Rare:
+                if (BuyCards.Money >= 2500)
+                {
+                    PackPanel.SetActive(true);
+                }
+                break;
+
+            case CardType.Epic:
+                if (BuyCards.Money >= 4000)
+                {
+                    PackPanel.SetActive(true);
+                }
+                break;
+        }
+    }
+    
     //Call this function to deactivate and hide the main menu panel during the main menu
     public void HidePackPanel()
     {
