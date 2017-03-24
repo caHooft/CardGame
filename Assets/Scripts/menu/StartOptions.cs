@@ -91,50 +91,6 @@ public class StartOptions : MonoBehaviour
         showPanels.ShowCardCollectionPanel();
     }
 
-     //Once the level has loaded, check if we want Music
-    void OnLevelWasLoaded()
-	{
-		//if changeMusicOnStart is true, call the PlayLevelMusic function of playMusic
-		if (changeMusicOnStart)
-		{
-			playMusic.PlayLevelMusic ();
-		}	
-	}
-
-
-	public void LoadDelayed()
-	{
-        //Call HideMenu function in showPanels to hide the main menu
-        showPanels.HideMenu ();
-
-        //Load the selected scene
-        SceneManager.LoadScene (sceneToStart);
-	}
-
-	public void HideDelayed()
-	{
-        //Call HideMenu function in showPanels to hide the main menu
-        showPanels.HideMenu();
-	}
-
-	public void StartGameInScene()
-	{
-        //Pause button now works since we are no longer in Main menu.
-        inMainMenu = false;
-
-		//If changeMusicOnStart is true, fade out volume of music 
-		if (changeMusicOnStart) 
-		{
-			//Wait until game has started, then play new music
-			Invoke ("PlayNewMusic", fadeAlphaAnimationClip.length);
-		}
-		//Set trigger for animator to start animation fading out Menu UI
-		animMenuAlpha.SetTrigger ("fade");
-		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
-		
-	}
-
-
 	public void PlayNewMusic()
 	{
         //Fade music 
